@@ -86,6 +86,10 @@ So if our constructor does something with storage, such as initializing a variab
 
 It does these through `initializer` functions which can often be identified by the naming convensions `__init` and `__init_unchained`. We can see these function implemented within `OracleUpgradeable.sol`
 
+If we try to summarize about how storage of upgradable smart contracts work, it would look something like this:
+![GQ2RmqDWMAA_5WU](https://github.com/user-attachments/assets/9cb99b83-c518-4795-b72b-a790419f1e73)
+
+
 ```js
 function __Oracle_init(address poolFactoryAddress) internal onlyInitializing {
     __Oracle_init_unchained(poolFactoryAddress);
